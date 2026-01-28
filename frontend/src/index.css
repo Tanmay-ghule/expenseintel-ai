@@ -1,0 +1,115 @@
+/* =========================================================
+   Global Base Styles
+   ========================================================= */
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+}
+
+/* =========================================================
+   Animations
+   ========================================================= */
+
+/* Fade + slide entrance animation */
+.fade-slide {
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   Glassmorphism & UI Effects
+   ========================================================= */
+
+/* Glass blur effect for sticky navbar */
+.nav-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(2, 6, 23, 0.75) !important;
+}
+
+/* Card hover lift & glow */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+/* Button micro-interaction */
+button:active {
+  transform: scale(0.96);
+}
+
+/* =========================================================
+   Skeleton Loaders
+   ========================================================= */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #020617 25%,
+    #1f2933 37%,
+    #020617 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* =========================================================
+   Responsive Design (Mobile First)
+   ========================================================= */
+
+/* Phones & Small Tablets */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    padding: 16px !important;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    gap: 8px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
