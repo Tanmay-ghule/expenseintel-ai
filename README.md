@@ -65,21 +65,21 @@ npm run dev
 Web app will run at:
 http://localhost:5173
 
-🔐 Authentication Flow
+## 🔐 Authentication Flow
 
-Register a new user
+-Register a new user
 
-Login to receive JWT access token
+-Login to receive JWT access token
 
-All protected routes use Bearer token authorization
+-All protected routes use Bearer token authorization
 
-📊 Analytics & Reporting
+## 📊 Analytics & Reporting
 
-Real-time monthly and daily expense analysis
+-Real-time monthly and daily expense analysis
 
-Category-wise spending insights
+-Category-wise spending insights
 
-AI-generated monthly financial summary
+-AI-generated monthly financial summary
 
-Downloadable CSV and professionally formatted PDF reports
+-Downloadable CSV and professionally formatted PDF reports
 
