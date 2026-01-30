@@ -13,7 +13,7 @@ from routes import expenses
 # FastAPI Application Setup
 # -------------------------------------------------------------------
 
-app = FastAPI(title="ExpenseIntel AI - Smart Expense Intelligence API")
+app = FastAPI(title="ExpenseIntel - Smart Expense Intelligence API")
 
 # Enable CORS for frontend (Vite default: http://localhost:5173)
 app.add_middleware(
@@ -73,7 +73,7 @@ def root():
     """
     API Health Check
     """
-    return {"message": "ExpenseIntel AI backend is running"}
+    return {"message": "ExpenseIntel backend is running"}
 
 
 # -------------------------------------------------------------------

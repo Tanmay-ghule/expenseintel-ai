@@ -1,6 +1,6 @@
-# ExpenseIntel AI 💸📊
+# ExpenseIntel 💸📊
 
-ExpenseIntel AI is a full-stack personal finance analytics platform that enables users to securely track, analyze, and visualize their expenses with interactive dashboards and intelligent, AI-style financial insights.
+ExpenseIntel is a full-stack personal finance analytics platform that enables users to securely track, analyze, and visualize their expenses with interactive dashboards and intelligent, financial insights.
 
 ---
 
@@ -13,7 +13,7 @@ ExpenseIntel AI is a full-stack personal finance analytics platform that enables
   - Category-wise distribution (Pie Chart)
   - Daily expense breakdown (Bar Chart)
 - KPI cards for Total Spend, Top Category, and Monthly Average
-- Automated AI-style financial insight summary
+- Automated spending insight
 - One-click export of reports in CSV and PDF formats
 - Modern glassmorphism dark UI with smooth animations
 - Fully responsive design across desktop, tablet, and mobile devices
@@ -38,7 +38,7 @@ ExpenseIntel AI is a full-stack personal finance analytics platform that enables
 
 ## 📁 Project Structure
 
-ExpenseIntel-AI/
+ExpenseIntel/
 ├── frontend/ # React client application
 ├── backend/ # FastAPI REST API server
 └── README.md
@@ -79,7 +79,7 @@ http://localhost:5173
 
 - Category-wise spending insights
 
-- AI-generated monthly financial summary
+- monthly financial insight
 
 - Downloadable CSV and professionally formatted PDF reports
 

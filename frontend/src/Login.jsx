@@ -45,7 +45,7 @@ function Login({ switchToRegister }) {
   return (
     <div style={pageStyle}>
       <form onSubmit={handleLogin} style={cardStyle} className="fade-in glow-hover">
-        <h2 style={title}>ExpenseIntel AI</h2>
+        <h2 style={title}>ExpenseIntel</h2>
 
         <input
           type="email"

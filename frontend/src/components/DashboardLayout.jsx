@@ -38,7 +38,7 @@ function DashboardLayout() {
     >
       {/* ================= NAVBAR ================= */}
       <nav style={navStyle} className={scrolled ? "nav-blur" : ""}>
-        <h2 style={{ color: theme.primary }}>ExpenseIntel AI</h2>
+        <h2 style={{ color: theme.primary }}>ExpenseIntel</h2>
 
         <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
           <span style={{ color: theme.textMuted, fontSize: "14px" }}>
@@ -54,7 +54,7 @@ function DashboardLayout() {
       <div style={mainWrap} className="fade-slide">
         {/* Welcome Section */}
         <div style={welcomeBox}>
-          <h2 style={welcomeText}>Welcome to ExpenseIntel AI</h2>
+          <h2 style={welcomeText}>Welcome to ExpenseIntel</h2>
           <p style={overviewText}>Your financial overview</p>
         </div>
 
@@ -70,8 +70,8 @@ function DashboardLayout() {
 
         <DailyBar />
 
-        {/* AI Insight */}
-        <h2 style={sectionTitle}>AI Insight</h2>
+        {/* Insight */}
+        <h2 style={sectionTitle}>Insight</h2>
         <AiInsight />
 
         {/* Reports */}

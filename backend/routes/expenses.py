@@ -64,10 +64,10 @@ def analytics(db: Session = Depends(get_db), user=Depends(get_current_user)):
     }
 
 
-# -------------------- AI SUMMARY --------------------
+# -------------------- INSIGHT  --------------------
 
-@router.get("/ai-summary")
-def ai_summary(db: Session = Depends(get_db), user=Depends(get_current_user)):
+@router.get("/insights")
+def spending_insights(db: Session = Depends(get_db), user=Depends(get_current_user)):
     today = date.today()
 
     expenses = db.query(Expense).filter(
@@ -189,36 +189,3 @@ def export_expenses_pdf(db: Session = Depends(get_db), user=Depends(get_current_
     c.save()
 
     return FileResponse(file_path, filename="expense_report.pdf", media_type="application/pdf")
-
-
-# -------------------- AI CHAT --------------------
-
-@router.post("/chat")
-def simple_chat(payload: dict, db: Session = Depends(get_db), user=Depends(get_current_user)):
-    q = payload["query"].lower()
-    today = date.today()
-
-    if "last week" in q:
-        start = today - timedelta(days=7)
-        expenses = db.query(Expense).filter(
-            Expense.user_id == user.id,
-            Expense.date >= start
-        ).all()
-
-        if not expenses:
-            return {"reply": "You had no expenses last week."}
-
-        total = sum(e.amount for e in expenses)
-        top = max(expenses, key=lambda e: e.amount).category
-        return {"reply": f"Last week you spent {total:.2f}. Highest category: {top}."}
-
-    if "this month" in q:
-        total = db.query(func.sum(Expense.amount)).filter(
-            Expense.user_id == user.id,
-            extract("month", Expense.date) == today.month,
-            extract("year", Expense.date) == today.year
-        ).scalar() or 0
-
-        return {"reply": f"This month your total spending is {total:.2f}."}
-
-    return {"reply": "Try: 'last week', 'this month', 'January spending', 'Can I save more?'"}

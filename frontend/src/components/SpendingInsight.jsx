@@ -5,7 +5,7 @@ import GlassCard from "./ui/GlassCard";
 import { theme } from "../theme";
 
 // -------------------------------------------------------------------
-// AI Insight Component
+// Spending Insight Component
 // Displays natural language summary of user's spending
 // -------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ export default function AiInsight() {
 
   const loadSummary = async () => {
     try {
-      const res = await apiRequest("/expenses/ai-summary", "GET", null, token);
+      const res = await apiRequest("/expenses/insights", "GET", null, token);
       setSummary(res.summary);
     } catch (error) {
       setSummary("Unable to generate insight right now.");
@@ -28,7 +28,7 @@ export default function AiInsight() {
 
   return (
     <GlassCard glow>
-      <h3 style={title}>AI Financial Insight</h3>
+      <h3 style={title}>Spending Insights</h3>
       <p style={text}>{summary}</p>
     </GlassCard>
   );
