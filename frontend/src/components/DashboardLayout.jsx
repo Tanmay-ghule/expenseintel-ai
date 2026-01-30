@@ -9,7 +9,7 @@ import KpiSection from "./KpiSection";
 import MonthlyChart from "./MonthlyChart";
 import CategoryPie from "./CategoryPie";
 import DailyBar from "./DailyBar";
-import AiInsight from "./AiInsight";
+import SpendingInsight from "./SpendingInsight";
 import ReportsSection from "./ReportsSection";
 
 // -------------------------------------------------------------------
@@ -72,7 +72,7 @@ function DashboardLayout() {
 
         {/* Insight */}
         <h2 style={sectionTitle}>Insight</h2>
-        <AiInsight />
+        <SpendingInsight />
 
         {/* Reports */}
         <h2 style={sectionTitle}>Reports</h2>
